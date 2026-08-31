@@ -1,75 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{seu nome aqui} - UX e Dev Front-end</title>
-    <!-- CSS compilado do SCSS | colocar o link correto, pois este vai dar erro, viu-->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Usando a fonte de icones aqui-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prática Tailwind - Dia 3 [Atividade 7]</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+<header class="w-full bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between flex-wrap gap-4">
+    
+        <div class="flex flex-col">
+      <a href="#" class="no-underline">
+        <h1 class="text-xl md:text-3xl font-bold text-green-900">
+          IFRN
+        </h1>
+      </a>
+      <p class="slogan hidden md:block text-xs text-gray-600 mt-1">
+        Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte
+      </p>
+    </div>
 
-    <header role="banner">
-        <nav role="navigation" aria-label="Navegação principal">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="hidden md:flex">
+      <ul class="flex items-center gap-4 lg:gap-6 list-none p-0 m-0">
+        <li><a href="#" class="text-gray-800 no-underline hover:text-green-600 transition">Processos seletivos</a></li>
+        <li><a href="#" class="text-gray-800 no-underline hover:text-green-600 transition">Cursos</a></li>
+        <li><a href="#" class="text-gray-800 no-underline hover:text-green-600 transition">Campi</a></li>
+        <li><a href="#" class="text-gray-800 no-underline hover:text-green-600 transition">Institucional</a></li>
+        <li><a href="#" class="text-gray-800 no-underline hover:text-green-600 transition">Acesso à Informação</a></li>
+        <li><a href="#" class="text-gray-800 no-underline hover:text-green-600 transition">Eventos</a></li>
+        <li><a href="#" class="text-gray-800 no-underline hover:text-green-600 transition">Serviços</a></li>
+      </ul>
+    </nav>
 
-    <main role="main">
-        <section id="sobre" aria-labelledby="titulo-card">
-            <div class="card">
+    <div class="flex items-center gap-2 md:gap-3">
+      
+      <ul class="social hidden lg:flex items-center gap-3 list-none p-0 m-0">
+        <li><a href="#" class="text-gray-700 hover:text-green-600 no-underline text-sm font-bold">IG</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-green-600 no-underline text-sm font-bold">X</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-green-600 no-underline text-sm font-bold">IN</a></li>
+        <li><a href="#" class="text-gray-700 hover:text-green-600 no-underline text-sm font-bold">YT</a></li>
+      </ul>
 
-                <!-- Avatar (placeholder) -->
-                <div class="card__avatar">
-                    <img src="https://via.placeholder.com/120x120/2c3e50/ffffff?text=Bruno"
-                        alt="Avatar de Bruno Nakamura, UX e Dev Front-end">
-                </div>
+      <ul class="actions hidden sm:flex items-center gap-2 list-none p-0 m-0">
+        <li><button title="Contraste" class="p-1 bg-transparent border-none cursor-pointer rounded text-gray-700">◐</button></li>
+      </ul>
 
-                <!-- Informações -->
-                <div class="card__content">
-                    <h1 id="titulo-card">Bruno Nakamura</h1>
-                    <p class="card__subtitle">UX e Dev Front-end</p>
+      <form id="busca" role="search" class="flex items-center">
+        <input 
+          type="search" 
+          placeholder="Buscar..." 
+          class="bg-gray-100 border border-gray-300 rounded-full px-3 py-1 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-600 w-28 sm:w-40 md:w-48"
+        />
+      </form>
 
-                    <p class="card__description">
-                        Sou um híbrido raro: Design Systems + Engenharia de Produto.
-                        Entrego de ponta a ponta – da descoberta à produção – com métricas
-                        de negócio na cabeceira e DX/UX no detalhe.<br>
-                        Tradução simultânea entre PMs, Design, Front, Back e Data.
-                        Sem teatrinho: shippo, meço, repito.
-                    </p>
+      <button 
+        id="menuToggle" 
+        aria-label="Abrir menu"
+        class="md:hidden bg-transparent border-none cursor-pointer p-2 rounded text-gray-800"
+      >
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M3 5h18a1 1 0 010 2H3a1 1 0 010-2zm0 6h18a1 1 0 010 2H3a1 1 0 010-2zm0 6h18a1 1 0 010 2H3a1 1 0 010-2z" clip-rule="evenodd"/>
+        </svg>
+      </button>
 
-                    <!-- Botão com ícone -->
-                    <a href="#" class="card__button" aria-label="Vamos trabalhar juntos">
-                        Vamos trabalhar juntos <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                </div>
+    </div>
 
-                <!-- Tecnologias (mockup de ícones) -->
-                <div class="card__tech" id="tecnologias">
-                    <h2 class="card__tech-title">Tecnologias que domino</h2>
-                    <ul class="card__tech-list">
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> ClickUp</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Dropbox</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> PAYCHEX</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> elastic</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> stripe</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer role="contentinfo">
-        <p>&copy; 2026 Bruno Nakamura - Exemplo didático para alunos de webdesign</p>
-    </footer>
+  </div>
+</header>
 </body>
-
 </html>
