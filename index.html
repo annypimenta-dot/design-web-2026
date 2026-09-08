@@ -2,74 +2,324 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{seu nome aqui} - UX e Dev Front-end</title>
-    <!-- CSS compilado do SCSS | colocar o link correto, pois este vai dar erro, viu-->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Usando a fonte de icones aqui-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 9 – Footer IFRN</title>
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="bg-white font-sans text-slate-700 antialiased">
 
-    <header role="banner">
-        <nav role="navigation" aria-label="Navegação principal">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Conteúdo principal -->
 
-    <main role="main">
-        <section id="sobre" aria-labelledby="titulo-card">
-            <div class="card">
+    <footer id="footer" class="w-full bg-white text-sm">
 
-                <!-- Avatar (placeholder) -->
-                <div class="card__avatar">
-                    <img src="https://via.placeholder.com/120x120/2c3e50/ffffff?text=Bruno"
-                        alt="Avatar de Bruno Nakamura, UX e Dev Front-end">
-                </div>
+        <!-- Botão "Voltar ao topo" -->
+        <div id="go-to-top" class="border-t border-slate-200 py-4">
+            <div class="container mx-auto flex justify-center px-4">
+                <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-xs font-semibold text-slate-500 hover:text-emerald-700 transition-colors cursor-pointer flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                    </svg>
+                    Voltar ao topo
+                </button>
+            </div>
+        </div>
 
-                <!-- Informações -->
-                <div class="card__content">
-                    <h1 id="titulo-card">Bruno Nakamura</h1>
-                    <p class="card__subtitle">UX e Dev Front-end</p>
-
-                    <p class="card__description">
-                        Sou um híbrido raro: Design Systems + Engenharia de Produto.
-                        Entrego de ponta a ponta – da descoberta à produção – com métricas
-                        de negócio na cabeceira e DX/UX no detalhe.<br>
-                        Tradução simultânea entre PMs, Design, Front, Back e Data.
-                        Sem teatrinho: shippo, meço, repito.
-                    </p>
-
-                    <!-- Botão com ícone -->
-                    <a href="#" class="card__button" aria-label="Vamos trabalhar juntos">
-                        Vamos trabalhar juntos <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        <!-- Mapa do site (sitemap) -->
+        <div id="sitemap" class="container mx-auto px-4 py-8">
+            <ul class="columns-1 md:columns-2 lg:columns-4 gap-8 space-y-8">
+                <!-- Processos seletivos -->
+                <li class="break-inside-avoid space-y-3">
+                    <a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/" aria-haspopup="true" class="font-bold text-slate-900 block hover:text-emerald-700">
+                        Processos seletivos
                     </a>
-                </div>
-
-                <!-- Tecnologias (mockup de ícones) -->
-                <div class="card__tech" id="tecnologias">
-                    <h2 class="card__tech-title">Tecnologias que domino</h2>
-                    <ul class="card__tech-list">
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> ClickUp</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Dropbox</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> PAYCHEX</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> elastic</li>
-                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> stripe</li>
+                    <ul aria-label="submenu" class="space-y-1.5 text-xs text-slate-600">
+                        <li><a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/?tipo=1" class="hover:underline hover:text-emerald-700">Bolsas para estudantes</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/?tipo=2" class="hover:underline hover:text-emerald-700">Empreenda no IFRN</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/?tipo=3" class="hover:underline hover:text-emerald-700">Estude no IFRN</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/?tipo=4" class="hover:underline hover:text-emerald-700">Gestão IFRN</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/?tipo=5" class="hover:underline hover:text-emerald-700">Internacionalização</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/?tipo=6" class="hover:underline hover:text-emerald-700">Monitoria e Tutoria</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/?tipo=9" class="hover:underline hover:text-emerald-700">Pesquise no IFRN</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/?tipo=7" class="hover:underline hover:text-emerald-700">Servidores</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/processos-seletivos/buscar/?tipo=8" class="hover:underline hover:text-emerald-700">Trabalhe no IFRN</a></li>
                     </ul>
+                </li>
+
+                <!-- Cursos -->
+                <li class="break-inside-avoid space-y-3">
+                    <a href="https://portal.ifrn.edu.br/cursos/buscar/" aria-haspopup="true" class="font-bold text-slate-900 block hover:text-emerald-700">
+                        Cursos
+                    </a>
+                    <ul aria-label="submenu" class="space-y-1.5 text-xs text-slate-600">
+                        <li><a href="https://portal.ifrn.edu.br/cursos/buscar/?categoria=cursos-de-pos-graduacao" class="hover:underline hover:text-emerald-700">Cursos de Pós-Graduação</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/cursos/buscar/?categoria=cursos-superiores" class="hover:underline hover:text-emerald-700">Cursos Superiores</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/cursos/buscar/?categoria=cursos-tecnicos" class="hover:underline hover:text-emerald-700">Cursos Técnicos</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/cursos/buscar/?categoria=outros-cursos" class="hover:underline hover:text-emerald-700">Outros Cursos</a></li>
+                    </ul>
+                </li>
+
+                <!-- Campi -->
+                <li class="break-inside-avoid space-y-3">
+                    <a href="https://portal.ifrn.edu.br/campus/" aria-haspopup="true" class="font-bold text-slate-900 block hover:text-emerald-700">
+                        Campi
+                    </a>
+                    <ul aria-label="submenu" class="space-y-1.5 text-xs text-slate-600">
+                        <li><a href="https://portal.ifrn.edu.br/campus/apodi/" class="hover:underline hover:text-emerald-700">Apodi</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/caico/" class="hover:underline hover:text-emerald-700">Caicó</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/canguaretama/" class="hover:underline hover:text-emerald-700">Canguaretama</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/ceara-mirim/" class="hover:underline hover:text-emerald-700">Ceará-Mirim</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/curraisnovos/" class="hover:underline hover:text-emerald-700">Currais Novos</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/ipanguacu/" class="hover:underline hover:text-emerald-700">Ipanguaçu</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/joaocamara/" class="hover:underline hover:text-emerald-700">João Câmara</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/jucurutu/" class="hover:underline hover:text-emerald-700">Jucurutu</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/lajes/" class="hover:underline hover:text-emerald-700">Lajes</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/macau/" class="hover:underline hover:text-emerald-700">Macau</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/mossoro/" class="hover:underline hover:text-emerald-700">Mossoró</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/natalcentral/" class="hover:underline hover:text-emerald-700">Natal-Central</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/natalcentrohistorico/" class="hover:underline hover:text-emerald-700">Natal-Centro Histórico</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/natal-zona-leste/" class="hover:underline hover:text-emerald-700">Natal-Zona Leste</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/natalzonanorte/" class="hover:underline hover:text-emerald-700">Natal-Zona Norte</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/novacruz/" class="hover:underline hover:text-emerald-700">Nova Cruz</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/parelhas/" class="hover:underline hover:text-emerald-700">Parelhas</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/parnamirim/" class="hover:underline hover:text-emerald-700">Parnamirim</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/paudosferros/" class="hover:underline hover:text-emerald-700">Pau dos Ferros</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/santacruz/" class="hover:underline hover:text-emerald-700">Santa Cruz</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/saogoncalo/" class="hover:underline hover:text-emerald-700">São Gonçalo do Amarante</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/sao-miguel/" class="hover:underline hover:text-emerald-700">São Miguel</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/sao-paulo-do-potengi/" class="hover:underline hover:text-emerald-700">São Paulo do Potengi</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/touros/" class="hover:underline hover:text-emerald-700">Touros</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/umarizal/" class="hover:underline hover:text-emerald-700">Umarizal</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/campus/reitoria/" class="hover:underline hover:text-emerald-700">Reitoria</a></li>
+                    </ul>
+                </li>
+
+                <!-- Institucional -->
+                <li class="break-inside-avoid space-y-3">
+                    <a href="https://portal.ifrn.edu.br/institucional/" aria-haspopup="true" class="font-bold text-slate-900 block hover:text-emerald-700">
+                        Institucional
+                    </a>
+                    <ul aria-label="submenu" class="space-y-1.5 text-xs text-slate-600">
+                        <li><a href="https://portal.ifrn.edu.br/institucional/apresentacao/" class="hover:underline hover:text-emerald-700">Apresentação</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/administracao-e-infraestrutura/" class="hover:underline hover:text-emerald-700">Administração</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/comissoes-permanentes/" class="hover:underline hover:text-emerald-700">Comissões permanentes</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/comunicacao/" class="hover:underline hover:text-emerald-700">Comunicação Institucional</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/ensino/" class="hover:underline hover:text-emerald-700">Ensino</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/estudantes/" class="hover:underline hover:text-emerald-700">Estudantes</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/extensao/" class="hover:underline hover:text-emerald-700">Extensão</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/gabinete/" class="hover:underline hover:text-emerald-700">Gabinete</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/gestao-estrategica/" class="hover:underline hover:text-emerald-700">Gestão Estratégica</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/governanca/" class="hover:underline hover:text-emerald-700">Governança</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/pesquisa-pos-graduacao-e-inovacao/" class="hover:underline hover:text-emerald-700">Pesquisa, Pós-graduação e Inovação</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/servidores/" class="hover:underline hover:text-emerald-700">Servidores</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/tecnologia-da-informacao/" class="hover:underline hover:text-emerald-700">Tecnologia da Informação</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/internacionalizacao/" class="hover:underline hover:text-emerald-700">Internacionalização</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/infraestrutura/" class="hover:underline hover:text-emerald-700">Infraestrutura</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/institucional/polo-de-inovacao-currais-novos/" class="hover:underline hover:text-emerald-700">Polo de Inovação Currais Novos</a></li>
+                    </ul>
+                </li>
+
+                <!-- Acesso à Informação -->
+                <li class="break-inside-avoid space-y-3">
+                    <a href="https://portal.ifrn.edu.br/acesso-a-informacao/" aria-haspopup="true" class="font-bold text-slate-900 block hover:text-emerald-700">
+                        Acesso à Informação
+                    </a>
+                    <ul aria-label="submenu" class="space-y-1.5 text-xs text-slate-600">
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/institucional/" class="hover:underline hover:text-emerald-700">Institucional</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/acoes-e-programas/" class="hover:underline hover:text-emerald-700">Ações e Programas</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/participacao-social/" class="hover:underline hover:text-emerald-700">Participação social</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/auditorias/" class="hover:underline hover:text-emerald-700">Auditorias</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/convenios-e-transferencias/" class="hover:underline hover:text-emerald-700">Convênios e Transferências</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/receitas-e-despesas/" class="hover:underline hover:text-emerald-700">Receitas e Despesas</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/licitacoes-e-contratos/" class="hover:underline hover:text-emerald-700">Licitações e Contratos</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/servidores/" class="hover:underline hover:text-emerald-700">Servidores</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/informacoes-classificadas/" class="hover:underline hover:text-emerald-700">Informações classificadas</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/servico-de-informacao-ao-cidadao/" class="hover:underline hover:text-emerald-700">Serviço de Informação ao Cidadão</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/perguntas-frequentes/" class="hover:underline hover:text-emerald-700">Perguntas Frequentes</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/portal-de-dados-abertos/" class="hover:underline hover:text-emerald-700">Dados Abertos</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/sancoes-administrativas/" class="hover:underline hover:text-emerald-700">Sanções administrativas</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/ferramentas-e-aspectos-tecnologicos/" class="hover:underline hover:text-emerald-700">Ferramentas e aspectos tecnológicos</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/boletins-de-servicos/" class="hover:underline hover:text-emerald-700">Boletins de Serviços</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/protecao-de-dados-pessoais/" class="hover:underline hover:text-emerald-700">Proteção de dados pessoais</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/estatutos-e-regimentos/" class="hover:underline hover:text-emerald-700">Documentos Institucionais</a></li>
+                        <li><a href="https://portal.ifrn.edu.br/acesso-a-informacao/transparencia-e-prestacao-de-contas/" class="hover:underline hover:text-emerald-700">Transparência e Prestação de Contas</a></li>
+                    </ul>
+                </li>
+
+                <!-- Eventos -->
+                <li class="break-inside-avoid space-y-3">
+                    <a href="https://portal.ifrn.edu.br/eventos/" class="font-bold text-slate-900 block hover:text-emerald-700">Eventos</a>
+                </li>
+
+                <!-- Serviços -->
+                <li class="break-inside-avoid space-y-3">
+                    <a href="https://portal.ifrn.edu.br/servicos/" class="font-bold text-slate-900 block hover:text-emerald-700">Serviços</a>
+                </li>
+
+                <!-- Acessibilidade e Créditos -->
+                <li class="break-inside-avoid space-y-3"><a href="https://portal.ifrn.edu.br/acessibilidade" class="font-bold text-slate-900 block hover:text-emerald-700">Acessibilidade</a></li>
+                <li class="break-inside-avoid space-y-3"><a href="https://portal.ifrn.edu.br/creditos" class="font-bold text-slate-900 block hover:text-emerald-700">Créditos</a></li>
+            </ul>
+        </div>
+
+        <!-- Banners das Seções (Ícones representativos via SVG) -->
+        <div class="border-t border-slate-200 py-8 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center justify-items-center text-center">
+                    <li>
+                        <a href="https://memoria.ifrn.edu.br/" class="flex flex-col items-center gap-2 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            </div>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-emerald-700">Memória</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://siabi.ifrn.edu.br/" class="flex flex-col items-center gap-2 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+                            </div>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-emerald-700">Bibliotecas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://portal.ifrn.edu.br/acesso-a-informacao/licitacoes/" class="flex flex-col items-center gap-2 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-emerald-700">Licitações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://portal.ifrn.edu.br/institucional/governanca/ouvidoria/" class="flex flex-col items-center gap-2 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            </div>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-emerald-700">Ouvidoria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://portal.ifrn.edu.br/acesso-a-informacao/processos-eletronicos/" class="flex flex-col items-center gap-2 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                            </div>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-emerald-700">Processos Eletrônicos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://portal.ifrn.edu.br/acesso-a-informacao/servico-de-informacao-ao-cidadao/" class="flex flex-col items-center gap-2 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-emerald-700">SIC</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://portal.ifrn.edu.br/acesso-a-informacao/transparencia-e-prestacao-de-contas/" class="flex flex-col items-center gap-2 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            </div>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-emerald-700">Transparência</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://falabr.cgu.gov.br/web/home" class="flex flex-col items-center gap-2 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.888pt0-.438 3.42 3.42 0 00-.539-1.932l-5.418 4.241a1 1 0 01-1.226 0l-5.418-4.241a3.42 3.42 0 00-.539 1.932V15a3 3 0 003 3h10a3 3 0 003-3V5.888z"></path></svg>
+                            </div>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-emerald-700">Fala.BR</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Informações institucionais (endereço, contato, redes sociais, e-MEC) -->
+        <div class="border-t border-slate-200 py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="flex-1 space-y-4">
+                        <h3 class="text-base font-bold text-slate-900">Instituto Federal de Educação, Ciência e Tecnologia do Estado do Rio Grande do Norte</h3>
+                        <dl class="grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 text-xs text-slate-600">
+                            <dt class="font-semibold text-slate-700">Endereço:</dt>
+                            <dd>Rua Dr. Nilo Bezerra Ramalho, 1692, Tirol</dd>
+                            <dt class="font-semibold text-slate-700">CEP:</dt>
+                            <dd>59015-300</dd>
+                            <dt class="font-semibold text-slate-700">E-mail:</dt>
+                            <dd><a href="mailto:comunicacao@ifrn.edu.br" class="hover:underline hover:text-emerald-700">comunicacao@ifrn.edu.br</a></dd>
+                            <dt class="font-semibold text-slate-700">Telefone:</dt>
+                            <dd>(84) 4005-0890</dd>
+                        </dl>
+                        
+                        <!-- Ícones de Redes Sociais em SVG Inline -->
+                        <ul class="flex items-center gap-3 pt-2">
+                            <!-- Instagram -->
+                            <li>
+                                <a href="https://www.instagram.com/ifrnoficial/" title="Instagram" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-emerald-700 hover:text-white transition-colors">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                            </li>
+                            <!-- X / Twitter -->
+                            <li>
+                                <a href="https://twitter.com/ifrnoficial_" title="Twitter/X" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-emerald-700 hover:text-white transition-colors">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                </a>
+                            </li>
+                            <!-- LinkedIn -->
+                            <li>
+                                <a href="https://br.linkedin.com/school/ifrn/" title="Linkedin" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-emerald-700 hover:text-white transition-colors">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>
+                            </li>
+                            <!-- YouTube -->
+                            <li>
+                                <a href="https://www.youtube.com/ifrnoficial" title="Youtube" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-emerald-700 hover:text-white transition-colors">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                                </a>
+                            </li>
+                            <!-- Spotify -->
+                            <li>
+                                <a href="https://open.spotify.com/show/2dOEWD8AjVqszkAXWHxWwf" title="Spotify" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-emerald-700 hover:text-white transition-colors">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141 4.32-1.32 9.721-.6 13.44 1.68.42.24.6.84.301 1.141zm.12-3.36c-3.899-2.34-10.319-2.58-14.039-1.44-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.62.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.422.36z"/></svg>
+                                </a>
+                            </li>
+                            <!-- TikTok -->
+                            <li>
+                                <a href="https://www.tiktok.com/@ifrnoficial" title="TikTok" class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-emerald-700 hover:text-white transition-colors">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02.77-.04 1.54-.04 2.31-.01 1.11-.02 2.22-.03 3.33-.86-.25-1.83-.17-2.6.28-.73.41-1.29 1.11-1.48 1.93-.21.83-.02 1.74.45 2.45.54.83 1.49 1.34 2.48 1.37.98.05 1.96-.32 2.64-1.03.65-.68.99-1.62 1.01-2.57.03-4.87.01-9.74.02-14.61z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Cartão e-MEC estilizado em CSS e SVG sem dependencia externa -->
+                    <div class="flex-shrink-0">
+                        <a href="https://emec.mec.gov.br/" class="border border-slate-200 rounded-lg p-4 flex items-center gap-4 hover:border-emerald-700 transition-colors bg-white shadow-xs">
+                            <div class="flex flex-col text-right">
+                                <span class="font-bold text-slate-900 text-sm">e-MEC</span>
+                                <span class="text-xs text-slate-500 max-w-[180px]">Consulte o cadastro da instituição no Sistema e-MEC</span>
+                            </div>
+                            <div class="w-16 h-16 bg-slate-100 rounded flex flex-col items-center justify-center p-1 border border-slate-300">
+                                <svg class="w-10 h-10 text-slate-800" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zm-3 0h2v3h-2v-3zm3 3h3v5h-3v-5zm-3 2h2v3h-2v-3z"/></svg>
+                                <span class="text-[8px] font-bold text-slate-600 mt-0.5">QR-CODE</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <footer role="contentinfo">
-        <p>&copy; 2026 Bruno Nakamura - Exemplo didático para alunos de webdesign</p>
+        <!-- Copyright -->
+        <div class="bg-emerald-900 text-white py-4 text-center">
+            <p class="text-xs font-light tracking-wide">
+                Copyright © 2026 | Instituto Federal de Educação, Ciência e Tecnologia do Estado do Rio Grande do Norte
+            </p>
+        </div>
+
     </footer>
+
 </body>
 
 </html>
